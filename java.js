@@ -55,6 +55,10 @@ function game () {
     } else if (computerSelection == 2 && playerSelection == 1){
         return console.log("You lose! Scissors beats Paper")
     } 
+
+    if (playerSelection != 1 || playerSelection != 0 || playerSelection != 2){
+        console.log("Invalid choice")
+    }
 }
 
 function round () {
