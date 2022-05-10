@@ -5,6 +5,9 @@ let paper = 1;
 let scissors = 2;
 let computerSelection = undefined;
 let playerSelection = undefined;
+let computerScore = 0;
+let playerScore = 0;
+
 
 function computerPlay() {
 computerSelection = Math.floor(Math.random() * 3)
@@ -34,26 +37,41 @@ playerSelection = playerSelection.toLowerCase()
 }
 
 function game () {
+
+
     if (playerSelection == computerSelection) {
         console.log("Draw")
     } 
 
     if (computerSelection == 0 && playerSelection == 1){
+        playerScore++ 
         return console.log("You win! Paper beats Rock")
+        `Player score: ${playerScore} Computer score: ${computerScore}`
+
     } else if (computerSelection == 0 && playerSelection == 2){
         return console.log("You lose! Rock beats Scissors")
+        `Player score: ${playerScore} Computer score: ${computerScore}`
+
     }
 
     if (computerSelection == 1 && playerSelection == 2){
         return  console.log("You win! Scissors beats Paper")
+        `Player score: ${playerScore} Computer score: ${computerScore}`
+
     } else if (computerSelection == 1 && playerSelection == 0){
         return console.log("You lose. Paper beats Rock")
+        `Player score: ${playerScore} Computer score: ${computerScore}`
+
     }
 
     if (computerSelection == 2 && playerSelection == 0) {
         return console.log("You win. Rock beats Scissors")
+        `Player score: ${playerScore} Computer score: ${computerScore}`
+
     } else if (computerSelection == 2 && playerSelection == 1){
         return console.log("You lose! Scissors beats Paper")
+        `Player score: ${playerScore} Computer score: ${computerScore}`
+
     } 
 
     if (playerSelection != 1 || playerSelection != 0 || playerSelection != 2){
