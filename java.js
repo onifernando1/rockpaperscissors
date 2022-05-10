@@ -22,11 +22,14 @@ function playerPlay () {
 playerSelection = prompt("Enter your choice (Rock/Paper/Scissors)")
 playerSelection = playerSelection.toLowerCase()
     if (playerSelection === "rock") {
-    return playerSelection = 0 
+        console.log("Your choice: Rock")
+        return playerSelection = 0 
     } else if (playerSelection === "paper") {
-    return playerSelection = 1
+        console.log("Your choice: Paper")
+        return playerSelection = 1
     } else if (playerSelection === "scissors") {
-    return playerSelection = 2
+        console.log("Your choice: Scissors")
+        return playerSelection = 2
     }
 }
 
