@@ -3,8 +3,8 @@ console.log("Hello World")
 let rock = 0;
 let paper = 1; 
 let scissors = 2;
-let computerSelection = undefined
-let playerSelection = undefined
+let computerSelection = undefined;
+let playerSelection = undefined;
 
 function computerPlay() {
 computerSelection = Math.floor(Math.random() * 3)
@@ -22,7 +22,7 @@ function playerPlay () {
 playerSelection = prompt("Enter your choice (Rock/Paper/Scissors)")
 playerSelection = playerSelection.toLowerCase()
     if (playerSelection === "rock") {
-    return playerSelection = 0
+    return playerSelection = 0 
     } else if (playerSelection === "paper") {
     return playerSelection = 1
     } else if (playerSelection === "scissors") {
@@ -54,7 +54,22 @@ function game () {
     } 
 }
 
-playerPlay()
-computerPlay()
-game ()
-console.log(playerSelection, computerSelection)
+function round () {
+    playerPlay()
+    computerPlay()
+    game()
+}
+
+function roundCount (){
+    
+    for (let i = 0; i < 5; i++) {
+        round() 
+    }
+     
+
+}
+
+
+
+roundCount()
+round () 
