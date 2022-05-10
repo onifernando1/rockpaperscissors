@@ -30,29 +30,31 @@ playerSelection = playerSelection.toLowerCase()
     }
 }
 
+function game () {
+    if (playerSelection == computerSelection) {
+        console.log("Draw")
+    } 
+
+    if (computerSelection == 0 && playerSelection == 1){
+        return console.log("You win! Paper beats Rock")
+    } else if (computerSelection == 0 && playerSelection == 2){
+        return console.log("You lose! Rock beats Scissors")
+    }
+
+    if (computerSelection == 1 && playerSelection == 2){
+        return  console.log("You win! Scissors beats Paper")
+    } else if (computerSelection == 1 && playerSelection == 0){
+        return console.log("You lose. Paper beats Rock")
+    }
+
+    if (computerSelection == 2 && playerSelection == 0) {
+        return console.log("You win. Rock beats Scissors")
+    } else if (computerSelection == 2 && playerSelection == 1){
+        return console.log("You lose! Scissors beats Paper")
+    } 
+}
+
 playerPlay()
 computerPlay()
-console.log(playerSelection)
-console.log(computerSelection)
-
-if (playerSelection === computerSelection) {
-    console.log("Draw")
-
-if (computerSelection == 0 && playerSelection == 1){
-    console.log("You win! Paper beats Rock")
-} else if (computerSelection == 0 && playerSelection == 2){
-    console.log("You lose! Rock beats Scissors")
-}
-
-if (computerSelection == 1 && playerSelection == 2){
-    console.log("You win! Scissors beats Paper")
-} else if (computerSelection == 1 && playerSelection == 0){
-    console.log("You lose. Paper beats Rock")
-}
-
-if (computerSelection == 2 && playerSelection == 0) {
-    console.log("You win. Rock beats Scissors")
-} else if (computerSelection == 2 && playerSelection == 1){
-    console.log("You lose! Scissors beats Paper")
-} 
-}
+game ()
+console.log(playerSelection, computerSelection)
