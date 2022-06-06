@@ -34,18 +34,12 @@ function playerPlay () {
     buttonScissors = document.querySelector(".scissors");
     buttonScissors.addEventListener('click', () => {
        return playerSelection = 2
+
     })
 
-    if (playerSelection === "rock") {
-        console.log("Your choice: Rock")
-        return playerSelection = 0 
-    } else if (playerSelection === "paper") {
-        console.log("Your choice: Paper")
-        return playerSelection = 1
-    } else if (playerSelection === "scissors") {
-        console.log("Your choice: Scissors")
-        return playerSelection = 2
-    }
+    console.log(playerSelection)
+    alert(playerSelection)
+
 }
 
 function game () {
