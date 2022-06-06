@@ -19,23 +19,34 @@ computerSelection = Math.floor(Math.random() * 3)
     return computerSelection
 }
 
+// function playerPlay() {
+
+//     buttonRock = document.querySelector(".rock");
+//     buttonRock.addEventListener('click', () => {
+//          playerSelection = 0
+//     })
+
+//     buttonPaper = document.querySelector(".paper");
+//     buttonPaper.addEventListener('click', () => {
+//          playerSelection = 1
+//     })
+
+//     buttonScissors = document.querySelector(".scissors");
+//     buttonScissors.addEventListener('click', () => {
+//         playerSelection = 2
+//     })
+
+// }
+
+
 function playerPlay() {
-
-    buttonRock = document.querySelector(".rock");
-    buttonRock.addEventListener('click', () => {
-         playerSelection = 0
-    })
-
-    buttonPaper = document.querySelector(".paper");
-    buttonPaper.addEventListener('click', () => {
-         playerSelection = 1
-    })
-
-    buttonScissors = document.querySelector(".scissors");
-    buttonScissors.addEventListener('click', () => {
-        playerSelection = 2
-
-    })
+    if (playerSelection == 0) {
+        console.log("Player Selection: Rock")
+    } else if (playerSelection == 1) {
+        console.log ("Player Selection: Paper")
+    } else if (playerSelection == 2) {
+        console.log("Player Selection: Scissors")
+    }
 
 }
 
@@ -90,6 +101,20 @@ function game () {
 }
 
 
+buttonRock = document.querySelector(".rock");
+buttonRock.addEventListener('click', () => {
+     playerSelection = 0
+})
+
+buttonPaper = document.querySelector(".paper");
+buttonPaper.addEventListener('click', () => {
+     playerSelection = 1
+})
+
+buttonScissors = document.querySelector(".scissors");
+buttonScissors.addEventListener('click', () => {
+    playerSelection = 2
+})
 
 
 function round () {
