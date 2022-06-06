@@ -25,7 +25,6 @@ buttonRock = document.querySelector(".rock");
 buttonRock.addEventListener('click', () => {
     playerSelection = "rock"
 })
-playerSelection = playerSelection.toLowerCase()
     if (playerSelection === "rock") {
         console.log("Your choice: Rock")
         return playerSelection = 0 
