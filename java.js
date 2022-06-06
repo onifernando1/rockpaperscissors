@@ -1,5 +1,3 @@
-console.log("Hello World")
-
 let rock = 0;
 let paper = 1; 
 let scissors = 2;
@@ -22,7 +20,7 @@ computerSelection = Math.floor(Math.random() * 3)
 }
 
 function playerPlay () {
-playerSelection = prompt("Enter your choice (Rock/Paper/Scissors)")
+playerSelection = ""
 playerSelection = playerSelection.toLowerCase()
     if (playerSelection === "rock") {
         console.log("Your choice: Rock")
@@ -91,16 +89,30 @@ function round () {
     game()
 }
 
-function roundCount (){
+buttons = document.querySelectorAll("#button");
+buttons.forEach((button) => {   
+    button.addEventListener('click', () => {
+        round()
+})
+})
+
+buttonRock = document.querySelector(".rock");
+buttonRock.addEventListener('click', () => {
+    playerSelection = "rock"
+})
+
+
+
+// function roundCount (){
     
-    for (let i = 0; i < 5; i++) {
-        round() 
-    }
+//     for (let i = 0; i < 5; i++) {
+//         round() 
+//     }
      
 
-}
+// }
 
 
 
-roundCount()
-round () 
+// roundCount()
+// round () 
