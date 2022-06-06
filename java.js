@@ -107,10 +107,16 @@ buttons.forEach((button) => {
 })
 })
 
+displayScore = function() {
+    const div = document.querySelector(".score")
+    div.textContent = `Player score: ${playerScore} Computer score: ${computerScore}`
+}
+
 function round () {
     computerPlay()
     playerPlay()
     game()
+    displayScore()
 }
 
 
