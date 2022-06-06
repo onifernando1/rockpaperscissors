@@ -20,11 +20,24 @@ computerSelection = Math.floor(Math.random() * 3)
 }
 
 function playerPlay () {
-playerSelection = ""
-buttonRock = document.querySelector(".rock");
-buttonRock.addEventListener('click', () => {
-    playerSelection = "rock"
-})
+
+    playerSelection = ""
+
+
+    if (buttonRock = document.querySelector(".rock")){
+        buttonRock.addEventListener('click', () => {
+            playerSelection = "rock"
+        })
+    } else if (buttonPaper = document.querySelector(".paper")) {
+        buttonPaper.addEventListener('click', () => {
+            playerSelection = "paper"
+        })
+    } else if (buttonScissors = document.querySelector(".scissors")){
+        buttonScissors.addEventListener('click', () => {
+            playerSelection = "scissors"
+        })
+    }
+
     if (playerSelection === "rock") {
         console.log("Your choice: Rock")
         return playerSelection = 0 
