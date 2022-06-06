@@ -44,7 +44,13 @@ function playerPlay () {
 
 function game () {
 
-
+    buttons = document.querySelectorAll("#button");
+    buttons.forEach((button) => {   
+        button.addEventListener('click', () => {
+            round()
+    })
+    })
+    
     if (playerSelection == computerSelection) {
         return console.log(`Draw
         \n Player score: ${playerScore} Computer score: ${computerScore}`)
@@ -101,12 +107,7 @@ function round () {
     game()
 }
 
-buttons = document.querySelectorAll("#button");
-buttons.forEach((button) => {   
-    button.addEventListener('click', () => {
-        round()
-})
-})
+
 
 
 
