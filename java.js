@@ -36,37 +36,37 @@ function game () {
 
 
     if (playerSelection == computerSelection) {
-        return results.textContent = `Draw
+        return results.textContent = "Draw"
         
     } 
 
     if (computerSelection == 0 && playerSelection == 1){
         playerScore++ 
-        return console.log(`You win! Paper beats Rock
+        return results.textContent ="Results: You win! Paper beats Rock"
 
     } else if (computerSelection == 0 && playerSelection == 2){
         computerScore++
-        return console.log(`You lose! Rock beats Scissors
+        return results.textContent =("Results: You lose! Rock beats Scissors")
 
     }
 
     if (computerSelection == 1 && playerSelection == 2){
         playerScore++
-        return  console.log(`You win! Scissors beats Paper
+        return results.textContent ="Results: You win! Scissors beats Paper"
 
     } else if (computerSelection == 1 && playerSelection == 0){
        computerScore++
-        return console.log(`You lose. Paper beats Rock
+       return results.textContent ="Results: You lose. Paper beats Rock"
 
     }
 
     if (computerSelection == 2 && playerSelection == 0) {
         playerScore++
-        return console.log(`You win. Rock beats Scissors
+        return results.textContent ="Results: You win. Rock beats Scissors"
 
     } else if (computerSelection == 2 && playerSelection == 1){
         computerScore++
-        return console.log(`You lose! Scissors beats Paper
+        return results.textContent = "Results: You lose! Scissors beats Paper"
 
     } 
 
