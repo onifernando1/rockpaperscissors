@@ -5,6 +5,7 @@ let computerSelection = undefined;
 let playerSelection = undefined;
 let computerScore = 0;
 let playerScore = 0;
+const results = document.querySelector(".results")
 
 
 function computerPlay() {
@@ -35,43 +36,37 @@ function game () {
 
 
     if (playerSelection == computerSelection) {
-        return console.log(`Draw
-        \n Player score: ${playerScore} Computer score: ${computerScore}`)
+        return results.textContent = `Draw
+        
     } 
 
     if (computerSelection == 0 && playerSelection == 1){
         playerScore++ 
         return console.log(`You win! Paper beats Rock
-        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } else if (computerSelection == 0 && playerSelection == 2){
         computerScore++
         return console.log(`You lose! Rock beats Scissors
-        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     }
 
     if (computerSelection == 1 && playerSelection == 2){
         playerScore++
         return  console.log(`You win! Scissors beats Paper
-        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } else if (computerSelection == 1 && playerSelection == 0){
        computerScore++
         return console.log(`You lose. Paper beats Rock
-        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     }
 
     if (computerSelection == 2 && playerSelection == 0) {
         playerScore++
         return console.log(`You win. Rock beats Scissors
-        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } else if (computerSelection == 2 && playerSelection == 1){
         computerScore++
         return console.log(`You lose! Scissors beats Paper
-        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } 
 
@@ -111,6 +106,10 @@ displayScore = function() {
     const div = document.querySelector(".score")
     div.textContent = `Player score: ${playerScore} Computer score: ${computerScore}`
 }
+
+// const results = document.querySelector(".results")
+// results.textContent = "Results:"
+
 
 function round () {
     computerPlay()
