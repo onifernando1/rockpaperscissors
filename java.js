@@ -19,25 +19,6 @@ computerSelection = Math.floor(Math.random() * 3)
     return computerSelection
 }
 
-// function playerPlay() {
-
-//     buttonRock = document.querySelector(".rock");
-//     buttonRock.addEventListener('click', () => {
-//          playerSelection = 0
-//     })
-
-//     buttonPaper = document.querySelector(".paper");
-//     buttonPaper.addEventListener('click', () => {
-//          playerSelection = 1
-//     })
-
-//     buttonScissors = document.querySelector(".scissors");
-//     buttonScissors.addEventListener('click', () => {
-//         playerSelection = 2
-//     })
-
-// }
-
 
 function playerPlay() {
     if (playerSelection == 0) {
@@ -100,6 +81,7 @@ function game () {
 
 }
 
+//Player Selection
 
 buttonRock = document.querySelector(".rock");
 buttonRock.addEventListener('click', () => {
@@ -116,12 +98,7 @@ buttonScissors.addEventListener('click', () => {
     playerSelection = 2
 })
 
-
-function round () {
-    computerPlay()
-    playerPlay()
-    game()
-}
+//Make button play 
 
 buttons = document.querySelectorAll("#button");
 buttons.forEach((button) => {   
@@ -129,6 +106,14 @@ buttons.forEach((button) => {
         round()
 })
 })
+
+function round () {
+    computerPlay()
+    playerPlay()
+    game()
+}
+
+
 
 
 
