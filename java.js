@@ -19,26 +19,23 @@ computerSelection = Math.floor(Math.random() * 3)
     return computerSelection
 }
 
-function playerPlay () {
+function playerPlay() {
 
     buttonRock = document.querySelector(".rock");
     buttonRock.addEventListener('click', () => {
-        return playerSelection = 0
+         playerSelection = 0
     })
 
     buttonPaper = document.querySelector(".paper");
     buttonPaper.addEventListener('click', () => {
-        return playerSelection = 1
+         playerSelection = 1
     })
 
     buttonScissors = document.querySelector(".scissors");
     buttonScissors.addEventListener('click', () => {
-       return playerSelection = 2
+        playerSelection = 2
 
     })
-
-    console.log(playerSelection)
-    alert(playerSelection)
 
 }
 
@@ -96,8 +93,8 @@ function game () {
 
 
 function round () {
-    playerPlay()
     computerPlay()
+    playerPlay()
     game()
 }
 
