@@ -21,6 +21,10 @@ computerSelection = Math.floor(Math.random() * 3)
 
 function playerPlay () {
 playerSelection = ""
+buttonRock = document.querySelector(".rock");
+buttonRock.addEventListener('click', () => {
+    playerSelection = "rock"
+})
 playerSelection = playerSelection.toLowerCase()
     if (playerSelection === "rock") {
         console.log("Your choice: Rock")
@@ -96,10 +100,7 @@ buttons.forEach((button) => {
 })
 })
 
-buttonRock = document.querySelector(".rock");
-buttonRock.addEventListener('click', () => {
-    playerSelection = "rock"
-})
+
 
 
 
