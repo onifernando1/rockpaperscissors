@@ -40,37 +40,43 @@ function game () {
 
 
     if (playerSelection == computerSelection) {
-        console.log("Draw")
+        return console.log(`Draw
+        \n Player score: ${playerScore} Computer score: ${computerScore}`)
     } 
 
     if (computerSelection == 0 && playerSelection == 1){
         playerScore++ 
-        return console.log("You win! Paper beats Rock")
-        `Player score: ${playerScore} Computer score: ${computerScore}`
+        return console.log(`You win! Paper beats Rock
+        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } else if (computerSelection == 0 && playerSelection == 2){
-        return console.log("You lose! Rock beats Scissors")
-        `Player score: ${playerScore} Computer score: ${computerScore}`
+        computerScore++
+        return console.log(`You lose! Rock beats Scissors
+        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     }
 
     if (computerSelection == 1 && playerSelection == 2){
-        return  console.log("You win! Scissors beats Paper")
-        `Player score: ${playerScore} Computer score: ${computerScore}`
+        playerScore++
+        return  console.log(`You win! Scissors beats Paper
+        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } else if (computerSelection == 1 && playerSelection == 0){
-        return console.log("You lose. Paper beats Rock")
-        `Player score: ${playerScore} Computer score: ${computerScore}`
+       computerScore++
+        return console.log(`You lose. Paper beats Rock
+        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     }
 
     if (computerSelection == 2 && playerSelection == 0) {
-        return console.log("You win. Rock beats Scissors")
-        `Player score: ${playerScore} Computer score: ${computerScore}`
+        playerScore++
+        return console.log(`You win. Rock beats Scissors
+        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } else if (computerSelection == 2 && playerSelection == 1){
-        return console.log("You lose! Scissors beats Paper")
-        `Player score: ${playerScore} Computer score: ${computerScore}`
+        computerScore++
+        return console.log(`You lose! Scissors beats Paper
+        \n Player score: ${playerScore} Computer score: ${computerScore}`)
 
     } 
 
