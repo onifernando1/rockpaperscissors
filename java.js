@@ -99,6 +99,11 @@ displayScore = function() {
     div.textContent = `Player score: ${playerScore} Computer score: ${computerScore}`
 }
 
+displayChoice = function(){
+
+
+}
+
 
 checkScore = function() {
     if (playerScore == 5) {
