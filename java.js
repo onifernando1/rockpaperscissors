@@ -103,11 +103,13 @@ displayScore = function() {
 checkScore = function() {
     if (playerScore == 5) {
         alert("You win")
+        gameEnd()
     }    
 }  
 
 if (computerScore == 5){
         alert("Computer Wins")
+        gameEnd()
     }
 
 
@@ -127,4 +129,13 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         round()
 })
-})
+})                                                                                                                                                              
+
+gameEnd = function() {
+
+    buttons.forEach((button) => {   
+        button.addEventListener('click', () => {
+            button.disabled = true
+    })
+    })
+}
