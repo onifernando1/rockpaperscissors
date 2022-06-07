@@ -101,9 +101,10 @@ displayScore = function() {
 }
 
 displayChoice = function(){
-    const divchoice = document.querySelector(".choice")
-    divchoice.textContent = `Player choice: ${options[playerSelection]}
-    \n Computer choice ${options[computerSelection]}`
+    const divChoice = document.querySelector(".playerChoice")
+    divChoice.textContent = `Player choice: ${options[playerSelection]}`
+    const choiceTwo =  document.querySelector(".computerChoice")
+    choiceTwo.textContent = `Computer choice ${options[computerSelection]}`
 
 }
 
