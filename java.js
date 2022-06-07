@@ -6,6 +6,7 @@ let playerSelection = undefined;
 let computerScore = 0;
 let playerScore = 0;
 const results = document.querySelector(".results")
+let options = ["Rock", "Paper", "Scissors"]
 
 function computerPlay() {
 computerSelection = Math.floor(Math.random() * 3)
@@ -100,7 +101,9 @@ displayScore = function() {
 }
 
 displayChoice = function(){
-
+    const divchoice = document.querySelector(".choice")
+    divchoice.textContent = `Player choice: ${options[playerSelection]}
+    \n Computer choice ${options[computerSelection]}`
 
 }
 
@@ -123,6 +126,7 @@ function round () {
     game()
     displayScore()
     checkScore()
+    displayChoice()
 }
 
 
