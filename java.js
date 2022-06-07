@@ -7,7 +7,6 @@ let computerScore = 0;
 let playerScore = 0;
 const results = document.querySelector(".results")
 
-
 function computerPlay() {
 computerSelection = Math.floor(Math.random() * 3)
     if (computerSelection == 0){
@@ -93,6 +92,34 @@ buttonScissors.addEventListener('click', () => {
     playerSelection = 2
 })
 
+
+
+displayScore = function() {
+    const div = document.querySelector(".score")
+    div.textContent = `Player score: ${playerScore} Computer score: ${computerScore}`
+}
+
+
+checkScore = function() {
+    if (playerScore == 5) {
+        alert("You win")
+    }    
+}  
+
+if (computerScore == 5){
+        alert("Computer Wins")
+    }
+
+
+function round () {
+    computerPlay()
+    playerPlay()
+    game()
+    displayScore()
+    checkScore()
+}
+
+
 //Make button play 
 
 buttons = document.querySelectorAll("#button");
@@ -101,38 +128,3 @@ buttons.forEach((button) => {
         round()
 })
 })
-
-displayScore = function() {
-    const div = document.querySelector(".score")
-    div.textContent = `Player score: ${playerScore} Computer score: ${computerScore}`
-}
-
-// const results = document.querySelector(".results")
-// results.textContent = "Results:"
-
-
-function round () {
-    computerPlay()
-    playerPlay()
-    game()
-    displayScore()
-}
-
-
-
-
-
-
-
-// function roundCount (){
-    
-//     for (let i = 0; i < 5; i++) {
-//         round() 
-//     }
-     
-
-// }
-
-
-
-// roundCount()
